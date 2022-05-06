@@ -153,7 +153,7 @@ const Login = () => {
                   </a>
                 </button>{" "}
                 <div className="signup">
-                  <Link to="/register">Create an Account</Link>
+                  <Link to="/register">Create a Account</Link>
                 </div>
               </div>
 
