@@ -46,7 +46,7 @@ const MyItem = () => {
      <Helmet>
         <title>my-item</title>
       </Helmet>
-     <h3 className="myitem fw-bold text-center pb-0 mb-0 pt-4">My Items</h3>
+     <h3 className="myitem fw-bold text-center pb-0 mb-0 pt-4">My Item</h3>
       <div className="main pb-2 pt-0 row mt-0  row-cols-1 row-cols-md-3 gx-4 gx-lg-5 gy-5">
       
       {books.map((book, index) => (
