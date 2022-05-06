@@ -1,0 +1,29 @@
+.banner{
+  max-height: 510px;
+  width: 100%;
+
+ 
+}
+.image{
+  width: 90%;
+  height: 510px;
+  margin: auto;
+  display: block;
+ 
+}
+.carousel-item {
+  position: relative;
+
+}
+.carousel-caption{
+position: absolute;
+top: 0;
+left: 0px;
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: rgba(0, 139, 139, 0.18);
+}
