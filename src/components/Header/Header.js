@@ -22,7 +22,7 @@ const Header = () => {
       <nav className="navbar mx-auto navbar-expand-lg navbar-light  mx-4">
           <div className="container-fluid   ">
             <CustomLink className="navbar-brand  d-flex align-items-center"  to='/logo'>
-             <h3 className="fw-bold  text-white p-0 m-0">Book Hose</h3>
+             <h3 className="fw-bold  text-white p-0 m-0">Book Market</h3>
             </CustomLink>
             <button
               className="navbar-toggler bg-white"
@@ -71,3 +71,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

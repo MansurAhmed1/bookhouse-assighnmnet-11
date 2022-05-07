@@ -17,7 +17,7 @@ const AddItem = () => {
         const publisher=event.target.publisher.value;
         const description=event.target.description.value;
         const data={name,price, quantity,img, description,email,publisher}
-        const url = 'http://localhost:5000/book';
+        const url = "https://assighment11.herokuapp.com/book";
       fetch(url, {
         method: "POST",
         headers: {

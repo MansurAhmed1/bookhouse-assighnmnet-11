@@ -11,27 +11,25 @@ const TableManageInventory = () => {
 
     const [books, setBooks] = useState([]);
     useEffect(function () {
-      fetch("http://localhost:5000/book")
-        .then(res => res.json())
-        .then(data => setBooks(data));
+      fetch("https://assighment11.herokuapp.com/book")
+        .then((res) => res.json())
+        .then((data) => setBooks(data));
     });
 
-    const handleDeleteButton =(id)=>{
-       
-            const procced=window.confirm('Are You sure Want to delete this book?')
-            if( procced){
-                const url=`http://localhost:5000/book/${id}`
-                fetch(url,{
-                    method:"DELETE"
-                })
-                .then(res=>res.json())
-                .then(data=>{
-                    const remaining=books.filter(book=>book._id !==id)
-                    setBooks(remaining)
-                })
-            }
-        
-    }
+    const handleDeleteButton = (id) => {
+      const procced = window.confirm("Are You sure Want to delete this book?");
+      if (procced) {
+        const url = `https://assighment11.herokuapp.com/book/${id}`;
+        fetch(url, {
+          method: "DELETE"
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            const remaining = books.filter((book) => book._id !== id);
+            setBooks(remaining);
+          });
+      }
+    };
  
   return (
     <div>

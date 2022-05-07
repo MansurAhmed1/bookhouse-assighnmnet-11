@@ -10,7 +10,7 @@ const InventoryItem = () => {
 
   const [books, setBooks] = useState([]);
   useEffect(function () {
-    fetch("http://localhost:5000/book")
+    fetch("https://assighment11.herokuapp.com/book")
       .then((res) => res.json())
       .then((data) => setBooks(data.slice(3, 9)));
   });

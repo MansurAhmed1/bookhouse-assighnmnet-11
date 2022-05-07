@@ -13,7 +13,7 @@ const ManageInventory = () => {
   console.log(book);
   useEffect(
     function () {
-      fetch(`http://localhost:5000/book/${id}`)
+      fetch(`https://assighment11.herokuapp.com/book/${id}`)
         .then((res) => res.json())
         .then((data) => setBook(data));
     },
@@ -28,7 +28,7 @@ const ManageInventory = () => {
     // const sumOfQuantity=parseFloat( quantity )+parseFloat(book.quantity)
 
     const updateQuantity = { quantity };
-    const url = `http://localhost:5000/book/${id}`;
+    const url = `https://assighment11.herokuapp.com/book/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -51,7 +51,7 @@ const ManageInventory = () => {
     }
 
     const updateQuantity2 = { quantity };
-    const url = `http://localhost:5000/update/${id}`;
+    const url = `https://assighment11.herokuapp.com/update/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
