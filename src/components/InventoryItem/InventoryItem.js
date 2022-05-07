@@ -29,7 +29,7 @@ const InventoryItem = () => {
         onClick={() => {
           navigate("/tablemangeinventory");
         }}
-        className="text-black btn px-5 py-2 mb-5  d-block mx-auto bg-white"
+        className="text-black manageButton  btn px-5 py-2 mb-5  d-block mx-auto"
       >
         MANAGE INVENTORY
       </button>

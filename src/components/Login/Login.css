@@ -4,30 +4,38 @@
   
 }
 .anchor{
-  color:#0e1c36 ;
+  color: rgb(16, 5, 26);
 }
 .btn-color:hover{
-  color: #ebf2fa;
+  /* color: #ebf2fa; */
 }
+
 .anchor{
   margin-left:-10px;
 }
 .profile-image-pic{
   height: 100px;
-  width: 100px;
+  width: 400px;
   object-fit: cover;
 }
 
 .container{
-  width: 800px;
+  /* width: 800px; */
+ 
 }
 
 .cardbody-color{
-  background-color: #ebf2fa;
+ background-color: cornflowerblue;
+ /* background-color: darkred; */
+
 }
 
 .signup a ,a,.anchor{
   text-decoration: none;
+  
+}
+.signup a{
+  color: #fff;
 }
 .signup a:hover {
   color:#0e1c36 ;
@@ -55,7 +63,7 @@ code {
   width: 295px;
 }
 .card-body{
-  width: 400px;
+  /* width: 400px; */
 }
 
 .pwd-container img {
@@ -64,4 +72,8 @@ code {
   width: 20px;
   right: 8px;
   top: 8px;
+}
+.login:hover {
+color: whitesmoke;
+background-color: brown;
 }

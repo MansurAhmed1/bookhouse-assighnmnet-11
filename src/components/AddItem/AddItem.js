@@ -18,17 +18,17 @@ const AddItem = () => {
         const description=event.target.description.value;
         const data={name,price, quantity,img, description,email,publisher}
         const url = "https://assighment11.herokuapp.com/book";
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
-        .then((res) => res.json())
-        .then((result) => {
-          console.log(result);
-        });
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json"
+          },
+          body: JSON.stringify(data)
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            console.log(result);
+          });
         event.target.reset()
     }
   return (
@@ -38,7 +38,7 @@ const AddItem = () => {
       </Helmet>
         <h3 className="text-white fw-bold text-center py-4 ">Add Your Item </h3>
       <form onSubmit={handleAddItem} action="">
-        <input type="text" name="name" required placeholder="Enter Your Name" />
+        <input type="text" name="name" required placeholder="Enter Book Name" />
         <input
           type="number"
           name="price"

@@ -9,13 +9,28 @@ import {Helmet} from "react-helmet-async";
 const TableManageInventory = () => {
     const navigate=useNavigate()
 
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const [size, setSize] = useState(10);
     const [books, setBooks] = useState([]);
-    useEffect(function () {
-      fetch("https://assighment11.herokuapp.com/book")
+
+    useEffect(() => {
+      fetch(`https://assighment11.herokuapp.com/book?page=${page}&size=${size}`)
         .then((res) => res.json())
         .then((data) => setBooks(data));
-    });
+    }, [page, size]);
 
+    useEffect(() => {
+      fetch("https://assighment11.herokuapp.com/productCount")
+        .then((res) => res.json())
+        .then((data) => {
+          const count = data.count;
+          const pages = Math.ceil(count / 10);
+          setPageCount(pages);
+        });
+    }, []);
+
+    ///////////////
     const handleDeleteButton = (id) => {
       const procced = window.confirm("Are You sure Want to delete this book?");
       if (procced) {
@@ -30,52 +45,82 @@ const TableManageInventory = () => {
           });
       }
     };
- 
-  return (
-    <div>
-      <table>
-      
-        <thead className="bg-dark">
-        <tr>   <th>Item</th>
-            <th>Product Name</th>
-            <th>Publisher</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>update</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-       
-       <tbody>
-        {
-            books.map((book,index)=>   
-            <tr >
-                   <td>{index+1}</td>
-              <td>{book.name}</td>
-              <td>{book.publisher}</td>
-              <td>{book.quantity}</td>
-              <td>{book.price}</td>
-              <td className="text-primary" onClick={()=>{
-                  navigate(`/book/${book._id}`)
 
-              }}>update</td>
-              <td><button onClick={()=>{
-                  handleDeleteButton(book._id)
-              }} className="btn bg-none border-0">
-               <img style={{width:"25px",color:"white"}} src={deleteButton} alt="" />
-               </button></td>
-              
-             
-            </tr>)
-        }
-        
-       </tbody>
-      </table>
-      <Helmet>
-        <title>manage-item</title>
-      </Helmet>
-    </div>
-  );
+    return (
+      <div className="d-flex bg-black  justify-content-center align-items-center flex-column pt-3">
+        <table className="tablemanege mx-auto" >
+          <thead className="bg-dark">
+            <tr>
+              {" "}
+              <th>Item</th>
+              <th>Product Name</th>
+              <th>Publisher</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {books.map((book, index) => (
+              <tr>
+                <td>{index + 1}</td>
+                <td>{book.name}</td>
+                <td>{book.publisher}</td>
+                <td>{book.quantity}</td>
+                <td>{book.price}</td>
+                <td
+                  className="text-primary"
+                  onClick={() => {
+                    navigate(`/book/${book._id}`);
+                  }}
+                >
+                  update
+                </td>
+                <td>
+                  <button
+                    onClick={() => {
+                      handleDeleteButton(book._id);
+                    }}
+                    className="btn bg-none border-0"
+                  >
+                    <img
+                      style={{ width: "25px", color: "white" }}
+                      src={deleteButton}
+                      alt=""
+                    />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {/* pagination */}
+        <div className="pagination mt-4 d-flex justify-content-center align-items-center">
+          {[...Array(pageCount).keys()].map((number) => (
+            <button
+              className=  {page === number ? "selected" : ""}
+              onClick={() => setPage(number)}
+            >
+              {number + 1}
+            </button>
+          ))}
+
+          <select onChange={(e) => setSize(e.target.value)}>
+            <option value="5">5</option>
+            <option value="10" selected>
+              10
+            </option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+        <Helmet>
+          <title>manage-item</title>
+        </Helmet>
+      </div>
+    );
 };
 
 export default TableManageInventory;

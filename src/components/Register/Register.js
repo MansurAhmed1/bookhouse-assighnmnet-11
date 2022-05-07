@@ -49,16 +49,16 @@ const Register = () => {
       </Helmet>
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <div className="card mb-5">
+          <div className="card bg-black mb-5">
             <form
               onSubmit={handleSignUp}
               className="card-body cardbody-color p-lg-5"
             >
               <div className="text-center">
-                <img
-                  src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png"
-                  className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
-                  width="200px"
+              <img
+                  src="https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg?w=360"
+                  className="img-fluid profile-image-pic my-3"
+                  
                   alt="profile"
                 />
               </div>
@@ -102,7 +102,7 @@ const Register = () => {
               </div>
 
               <div className="text-center">
-                <button type="submit" className="btn btn-color px-5  w-100">
+                <button type="submit" className="btn login btn-color px-5  w-100">
                   Register
                 </button>
               </div>

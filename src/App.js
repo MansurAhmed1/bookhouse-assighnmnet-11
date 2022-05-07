@@ -29,7 +29,11 @@ function App() {
         ></Route>
         <Route
           path="/book/:id"
-          element={<ManageInventory></ManageInventory>}
+          element={
+            <RequireAuth>
+              <ManageInventory></ManageInventory>
+            </RequireAuth>
+          }
         ></Route>
         <Route
           path="/myitem"
@@ -47,7 +51,11 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route path="/additem" element={<AddItem />}></Route>
+        <Route path="/additem" element={
+          <RequireAuth>
+            <AddItem />
+          </RequireAuth>
+        }></Route>
         <Route path="/loading" element={<Loading></Loading>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
@@ -57,9 +65,5 @@ function App() {
 }
 
 export default App;
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/MansurAhmed1/bookhouse-assighnmnet-11.git
-// git push -u origin main
+
+//https://stackoverflow.com/questions/72149715/delete-a-repository-and-create-new-repository-in-same-file

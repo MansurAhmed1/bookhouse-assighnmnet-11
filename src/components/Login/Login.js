@@ -75,7 +75,7 @@ const Login = () => {
   let errorElement;
   if (error || googleError || facebookError || githubError || forgotError) {
     errorElement = (
-      <p className="text-danger">
+      <p className="text-danger  " style={{color:"red"}}>
         Error: {error?.message} {googleError?.message} {facebookError?.message}{" "}
         {githubError?.message} {forgotError?.message}
       </p>
@@ -84,10 +84,10 @@ const Login = () => {
   // {errorElement}
 
   return (
-    <div className="container   ">
+    <div className="container mt-4  ">
       <div className="row">
-        <div className="col-md-6 offset-md-3">
-          <div className="card  mb-5">
+        <div className="col-md-6  offset-md-3">
+          <div className="card form-card bg-black mb-5">
             <form
               onSubmit={handleSignIn}
               className="card-body login-card cardbody-color p-lg-5 "
@@ -134,7 +134,7 @@ const Login = () => {
 
               {errorElement}
               <div className="text-center">
-                <button type="submit" className="btn btn-color px-5  w-100">
+                <button type="submit" className="btn login   btn-color px-5  w-100">
                   Login
                 </button>
               </div>
@@ -151,12 +151,12 @@ const Login = () => {
                     }
                   }}
                 >
-                  <a className="anchor text-primary" href="#g">
+                  <a className="anchor " href="#g">
                     Forgot Password?
                   </a>
                 </button>{" "}
                 <div className="signup">
-                  <Link to="/register">Create a Account</Link>
+                  <Link className="anchor" to="/register">Create a Account</Link>
                 </div>
               </div>
 
@@ -164,27 +164,29 @@ const Login = () => {
                   Registered? <a href="#m" className="text-dark fw-bold"> Create an
                     Account</a>
                 </div> */}
-              <div className="mt-5 text-center">Log in with</div>
+           
               <div className="social-site-logIn d-flex flex-column justify-content-center align-items-center">
                 <button
                   onClick={() => signInWithFacebook()}
-                  className="btn p-0 m-3 "
+                  className="btn p-0 m-3 bg-white w-100  "
                 >
                   <img
                     style={{ width: "40px", height: "40px" }}
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///9HWZM9UY81S4z09fgxSIqkq8Xd4OpAU5CHkbU7T46Zob5EVpG+w9ZBVJBjcKB/ibBOYJjn6fGwt85ebZ/w8fZreabU1+RUZJrFytt0gKrl5+/N0eBZaZ1dbJ9LXZe5vtOTm7yhqcUVgHx+AAAEAUlEQVR4nO2d6XarIBRGDQ4xBI1mTlozvf9DtmmzbtNGUC6DHNe3fyfgXijo4QBRBAAAAAAAAAAAAAAAAAAAAAAAAAAAADAn8Ytnu+WqavLUJ+ft9d2f5eGY81JM/FLmcX1devGbLnjp2e6BYHzuoR3n6UB+X7B659gv2fIB/T4RfOVWcJEPK/hJ7FQxAEG3ihUb2u4L7uxZLOKh3b4RtaMeNfE9BEphVzeG8zDu0TvcydCfnIf2+sFNI14GHgmfcfMkHod8l/lL/G5fMAlhKPxH7uA23QUyVHxTbu0bhvQY3rH/IGbhjBV30vEb2h8RAzOMpzCEIQytI14Yj6HIORfn/eIvucqRjqFgfD27TDctNS7XCkUqhmW6zt6kVb4pXhRpGIp4q4641PJGJGHI110RJdqGgmeddZI2FKJHSJCyYXlu6z1HZFju+wgSNhR1v28fuoa8ZxyJrCG/9ayTqqHY962TqmH/WCdRw/LYu06ihn27GbKGYt2/TpqGrPt1lLghl38PvqCYCwrXsP9QEUUHxURCuIYdc5vJZrl5sFzRjNPwQl5FUZ3qn18KZYXhGsbSxzBLedkRQqRhKCu/0pufDNZQ2tHcNCdgwzWUzN1udGeYgzUsq/bSV7ozzMEayjIMtBM9wjWct5euXRA5Q+00CGqGCQxhCEMYwhCGMIQhDGEIQxiqEYw/kUoMU/4KoxEvLfdZ8Ywkx+RSvHLbU4jqi6ZX0kU7yZ7AzIzGZGELiomLYAxzo5T6TTp2w6k8ijoSw/HfpSt5nSMxnMvXy43EUBEJH4nhicB4aGZIYR7fzFA+HAZkqJFb8gKJ1QjMZIOHdwp3KTO5kIKCITe5kJuiymAMjdpwplggH4yhURtuKXwBG7VhQ2HtmkkbJrWi4HAMDUaLJYlIlCwzoQ/KHJtgDCf5f29bVSiz+MIxnLDmeW3vWpIxdHpZBdyo6wvI8PcibSbJ+ronXuos5Q7K8BeyvDbtwmEIQxjCEIYwhCEMYQhDGOobks6ngSEMYQhDGMJQFzbC/NLfjDGDFoYwhCEMYQhDGDozdLCvviIjeQhDZt9QtWmTf0PRWBfU31/FqaEsZmeEKkPJu6GT8+WsHPdky9As91jC1MaDaMnQxTEzkTpV0LMhPzgx3FloRDuG4uREMIoq8yOf7Bg6eKF5XMfEuDu1YsgN0gE7MD/VyoZh7qab+cb4xcaCYb5wemLuITa7Uc0N2cnxkcC7iVF3Y2wYV87PPE6q2GBcNDRkQrE5qD12W/VmAK4MSz7xcWj1F9N5k3LGcn1i2Z4KHf9jPObHi8Hafn02h1U206e6tBtW6r9ds8vO39nxAAAAAAAAAAAAAAAAAAAAAAAAAAAAjJcPriR27CHd9lQAAAAASUVORK5CYII="
                     alt=""
                   />
+                  Sign In With Facebook
                 </button>
-                <button onClick={() => signInWithGithub()} className="btn  p-0">
+                <button onClick={() => signInWithGithub()} className="btn  p-0 bg-white w-100 ">
                   <img
                     style={{ width: "40px", height: "40px" }}
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8JHP_ZU-606Tcj8clDo0chONPuvAgQsV2UA&usqp=CAU"
                     alt=""
                   />
+                    <span className="">Sign In With Github</span>
                 </button>
                 <button
-                  className="border-0  p-0 m-3"
+                  className="border-0  p-0 m-3 bg-white w-100 "
                   onClick={() => signInWithGoogle()}
                 >
                   <img
@@ -192,6 +194,7 @@ const Login = () => {
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQVCvwLClys3Jnzm_KA1AZLdeU8ikVqmlLHBqEqMk2a72vyXEuqKuGlfralOOsu_oM8Q&usqp=CAU"
                     alt=""
                   />
+                    Sign In With Google
                 </button>
                 <ToastContainer />
               </div>

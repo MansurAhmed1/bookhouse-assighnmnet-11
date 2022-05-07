@@ -7,8 +7,8 @@ const Footer = () => {
   const [user]=useAuthState(auth)
   return (
     <div>
-      {
-        user && <div style={{ height: "80px" }} className="">
+     
+       <div style={{ height: "80px" }} className="">
         <footer className="mt-5 d-flex flex-md-row justify-content-md-between bg-secondary  py-4 align-items-center flex-column justify-content-center container-fluid mx-auto">
           <div className="text-white ms-md-5 text-center mb-4 mb-md-0">
             &copy;2022 .All right reserved
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </footer>
       </div>
-      }
+     
       
     </div>
   );

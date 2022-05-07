@@ -1,0 +1,28 @@
+.requset-form{
+    width: 80%;
+    margin: auto;
+    background-color: rgba(127, 255, 212, 0.073);
+    padding: 20px;
+}
+.requset-form input{
+    width: 60%;
+    
+}
+ label {
+    width: 60%;
+    display: block;
+    margin: auto;
+
+}
+.requset-form textarea {
+    width: 60%;
+}
+.requset-form-button {
+    width: 60%;
+    display: block;
+    margin: auto;
+    background-color: rgb(77, 234, 234);
+}
+.requset-form-button:hover {
+    background-color: crimson;
+}
