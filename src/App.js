@@ -14,7 +14,7 @@ import TableManageInventory from "./components/tableManageInventory/TableManageI
 import AddItem from "./components/AddItem/AddItem";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
 import Loading from "./components/Loading/Loading";
-
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App  ">
@@ -51,8 +51,15 @@ function App() {
         <Route path="/loading" element={<Loading></Loading>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
 
 export default App;
+// git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/MansurAhmed1/bookhouse-assighnmnet-11.git
+// git push -u origin main
