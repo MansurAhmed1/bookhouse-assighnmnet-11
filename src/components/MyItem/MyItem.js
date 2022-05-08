@@ -60,7 +60,7 @@ const MyItem = () => {
         }}
         className="text-black manageButton  btn px-5 py-2 mb-5  d-block mx-auto"
       >
-        MANAGE INVENTOR
+        MANAGE INVENTORY
       </button>
    </div>
   );
