@@ -3,8 +3,7 @@
 import React from "react";
 import "./Banner.css";
 import book1 from "../../image/bookedited1.png";
-import book2 from "../../image/bookedited2.jpg";
-import book3 from "../../image/editedbook1.png";
+
 const Banner = () => {
   return (
     <div className="banner ">
@@ -38,19 +37,19 @@ const Banner = () => {
         <div className="carousel-inner">
           <div className="carousel-item  active">
             <img
-              src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2092/posts/36360/image-upload/book-cover-fonts_5b.jpg"
               className=" image  img-fluid "
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block"></div>
           </div>
           <div className="carousel-item">
-            <img src={book1} className=" image  img-fluid  " alt="..." />
+            <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/101874664/original/33d94e974fe1bace49171fb092006cc1b346a828/design-a-good-cover-for-your-book-or-your-novel.jpg" className=" image  img-fluid  " alt="..." />
             <div className="carousel-caption d-none d-md-block"></div>
           </div>
           <div className="carousel-item ">
             <img
-              src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              src="https://www.upwork.com/catalog-images-resized/b928574616da794de7fe663ab9277656/large"
               className="  image img-fluid"
               alt="..."
             />

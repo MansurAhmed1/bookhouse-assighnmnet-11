@@ -27,7 +27,7 @@ const Card = (props) => {
           onClick={() => {
             navigate(`/book/${_id}`);
           }}
-          className="btn bg-black update-button  text-white  rounded"
+          className="btn  update-button  rounded"
         >
           Update{" "}
         </button>
