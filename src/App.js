@@ -53,17 +53,25 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route path="/additem" element={
-          <RequireAuth>
-            <AddItem />
-          </RequireAuth>
-        }></Route>
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <AddItem />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/loading" element={<Loading></Loading>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/bookrequest" element={<Takearequest></Takearequest>}></Route>
+        <Route
+          path="/bookrequest"
+          element={
+            <RequireAuth>
+              <Takearequest></Takearequest>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="*" element={<Error></Error>}></Route>
-  
-        
       </Routes>
       <Footer></Footer>
     </div>
