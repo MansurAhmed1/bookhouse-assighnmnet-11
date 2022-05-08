@@ -1,0 +1,27 @@
+[debug] [2022-05-08T10:24:19.695Z] ----------------------------------------------------------------------
+[debug] [2022-05-08T10:24:19.697Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-05-08T10:24:19.698Z] CLI Version:   10.8.0
+[debug] [2022-05-08T10:24:19.698Z] Platform:      win32
+[debug] [2022-05-08T10:24:19.698Z] Node Version:  v16.13.1
+[debug] [2022-05-08T10:24:19.704Z] Time:          Sun May 08 2022 16:24:19 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-08T10:24:19.704Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-08T10:24:19.789Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-08T10:24:19.789Z] > authorizing via signed-in user (mansurahmed75236@gmail.com)
+[debug] [2022-05-08T10:24:19.789Z] [iam] checking project assighnment11 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-08T10:24:19.792Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/assighnment11:testIamPermissions [none]
+[debug] [2022-05-08T10:24:19.792Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/assighnment11:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-08T10:24:33.938Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/assighnment11:testIamPermissions 200
+[debug] [2022-05-08T10:24:33.938Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/assighnment11:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-08T10:24:33.940Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/assighnment11 [none]
+[debug] [2022-05-08T10:24:35.525Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/assighnment11 200
+[debug] [2022-05-08T10:24:35.525Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/assighnment11 {"projectId":"assighnment11","projectNumber":"162273793538","displayName":"assighnment11","name":"projects/assighnment11","resources":{"hostingSite":"assighnment11"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'assighnment11'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-05-08T10:24:35.530Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/assighnment11 [none]
+[debug] [2022-05-08T10:24:39.570Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/assighnment11 200
+[debug] [2022-05-08T10:24:39.571Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/assighnment11 {"projectId":"assighnment11","projectNumber":"162273793538","displayName":"assighnment11","name":"projects/assighnment11","resources":{"hostingSite":"assighnment11"},"state":"ACTIVE"}
+[debug] [2022-05-08T10:24:39.577Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/162273793538/sites/assighnment11/versions [none]
+[debug] [2022-05-08T10:24:39.577Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/162273793538/sites/assighnment11/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
