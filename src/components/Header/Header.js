@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Header.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -8,9 +8,17 @@ import auth from "../firebase.init";
 import { signOut } from "firebase/auth";
 import CustomLink from "../../CustomLink/CustomLink";
 
+
 const Header = () => {
   const [user] = useAuthState(auth);
   console.log(user);
+  const[requests,setrequests]=useState([])
+  useEffect(function(){
+      fetch('https://assighment11.herokuapp.com/request')
+      .then(res=>res.json())
+      .then(data=>setrequests(data))
+
+  },[requests])
 
   const handleSignOut = () => {
     signOut(auth);
@@ -18,7 +26,7 @@ const Header = () => {
   return (
     <div>
       <header className="  py-2">
-        <nav className="navbar mx-auto navbar-expand-lg navbar-light  mx-4">
+        <nav className="navbar   mx-auto navbar-expand-lg navbar-light  mx-4">
           <div className="container-fluid   ">
             <CustomLink
               className="navbar-brand  d-flex align-items-center"
@@ -73,6 +81,10 @@ const Header = () => {
                 <CustomLink className="nav-link mx-3 p-1" to="/blog">
                   Blog
                 </CustomLink>
+                <CustomLink className="nav-link mx-3 p-1 position-relative" to="/bookrequest">
+                <div className="numberOfRequest2 text-center ">{requests.length}</div>
+                  Request
+                </CustomLink>
                 {user ? (
                   <button
                     style={{ color: "rgb(113, 198, 235)" }}
@@ -86,9 +98,7 @@ const Header = () => {
                     Login
                   </CustomLink>
                 )}
-               
               </div>
-              
             </div>
           </div>
         </nav>

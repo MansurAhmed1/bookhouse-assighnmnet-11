@@ -1,0 +1,48 @@
+/** @format */
+
+.serviceCard {
+  width: 300px;
+  height: 400px;
+  background-color: crimson;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+.mainCard {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px;
+}
+.title {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  transition: 3s;
+  color: aliceblue;
+  background-color: rgb(7, 20, 44);
+}
+
+.serviceCard:hover .title {
+  /* background-color: crimson;
+    bottom:105px ;
+    color: aliceblue; */
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(17, 5, 34, 0.87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+.services {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 640px) {
+  .mainCard {
+    grid-template-columns: auto;
+  }
+}

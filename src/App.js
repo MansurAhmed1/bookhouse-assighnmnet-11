@@ -15,6 +15,8 @@ import AddItem from "./components/AddItem/AddItem";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
 import Loading from "./components/Loading/Loading";
 import Footer from "./components/Footer/Footer";
+import Blog from "./components/Bolg/Blog";
+import Takearequest from "./components/TakeRequest/Takearequest";
 function App() {
   return (
     <div className="App  ">
@@ -57,7 +59,11 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path="/loading" element={<Loading></Loading>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/bookrequest" element={<Takearequest></Takearequest>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
+  
+        
       </Routes>
       <Footer></Footer>
     </div>
