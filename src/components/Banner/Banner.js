@@ -26,9 +26,11 @@ const Banner = () => {
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="1"
             aria-label="Slide 2"
+            className="bg-black"
           ></button>
           <button
             type="button"
+            className="bg-black"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="2"
             aria-label="Slide 3"
@@ -36,20 +38,21 @@ const Banner = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item  active">
-            <img
-              src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2092/posts/36360/image-upload/book-cover-fonts_5b.jpg"
-              className=" image  img-fluid "
-              alt="..."
-            />
+          <img src="https://compote.slate.com/images/64f54020-be26-4b16-9020-913ceab99a5f.jpeg?width=780&height=520&rect=1560x1040&offset=0x0" className=" image  img-fluid  " alt="..." />
+           
+          
             <div className="carousel-caption d-none d-md-block"></div>
           </div>
           <div className="carousel-item">
-            <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/101874664/original/33d94e974fe1bace49171fb092006cc1b346a828/design-a-good-cover-for-your-book-or-your-novel.jpg" className=" image  img-fluid  " alt="..." />
-            <div className="carousel-caption d-none d-md-block"></div>
+          <img
+              src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2021/09/Book-covers.jpg?fit=1200%2C613&ssl=1&w=640"
+              className=" image  img-fluid "
+              alt="..."
+            /> <div className="carousel-caption d-none d-md-block"></div>
           </div>
           <div className="carousel-item ">
             <img
-              src="https://www.upwork.com/catalog-images-resized/b928574616da794de7fe663ab9277656/large"
+              src="https://www.colorlines.com/sites/default/files/styles/article_lead_normal/public/2021-02/CUT_colorlines%20reads%20new%20you%2002022021_0.jpg?itok=K7i_bw9z"
               className="  image img-fluid"
               alt="..."
             />

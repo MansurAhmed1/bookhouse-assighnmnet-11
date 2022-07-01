@@ -11,28 +11,31 @@ import CustomLink from "../../CustomLink/CustomLink";
 
 const Header = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
-  const[requests,setrequests]=useState([])
-  useEffect(function(){
-      fetch('https://assighment11.herokuapp.com/request')
-      .then(res=>res.json())
-      .then(data=>setrequests(data))
-
-  },[requests])
-
+  // console.log(user?.email);
+  const [requests, setrequests] = useState([]);
+  useEffect(
+    function () {
+      fetch("https://assighment11.herokuapp.com/request")
+        .then((res) => res.json())
+        .then((data) => setrequests(data));
+    },
+    [requests]
+  );
+  const length = requests.length;
+  console.log(length);
   const handleSignOut = () => {
     signOut(auth);
   };
   return (
     <div>
-      <header className="  py-2">
-        <nav className="navbar   mx-auto navbar-expand-lg navbar-light  mx-4">
+      <header className="  py-2 pt-3">
+        <nav className="navbar sticky-top  mx-auto navbar-expand-lg navbar-light  mx-4">
           <div className="container-fluid   ">
             <CustomLink
               className="navbar-brand  d-flex align-items-center"
               to="/logo"
             >
-              <h3 className="fw-bold  text-white p-0 m-0">Book Market</h3>
+              <h3 className="fw-bold  headerTitle  p-0 m-0">Book Market</h3>
             </CustomLink>
             <button
               className="navbar-toggler bg-white"
@@ -51,50 +54,53 @@ const Header = () => {
             >
               <div className="navbar-nav   d-flex flex-lg-row flex-column justify-content-center align-items-center">
                 <CustomLink
-                  className="nav-link active mx-3 p-1 "
+                  className=" active mx-lg-1  p-1 px-3 "
                   aria-current="page"
                   to={"/"}
                 >
                   Home
                 </CustomLink>
                 <CustomLink
-                  className="nav-link active mx-3 p-1 "
+                  className="   mx-1 p-1 px-3 "
                   aria-current="page"
                   to={"/myitem"}
                 >
                   My Item
                 </CustomLink>
                 <CustomLink
-                  className="nav-link active mx-3 p-1 "
+                  className="    mx-1 p-1 px-3 "
                   aria-current="page"
                   to={"/additem"}
                 >
                   Add Item
                 </CustomLink>
                 <CustomLink
-                  className="nav-link active mx-3 p-1 "
+                  className="     mx-1 p-1 px-3 "
                   aria-current="page"
                   to={"/tablemangeinventory"}
                 >
                   Manage Item
                 </CustomLink>
-                <CustomLink className="nav-link mx-3 p-1" to="/blog">
+                {/* <CustomLink className="     mx-1 p-1 px-3" to="/blog">
                   Blog
-                </CustomLink>
-                <CustomLink className="nav-link mx-3 p-1 position-relative" to="/bookrequest">
-                <div className="numberOfRequest2 text-center ">{requests.length}</div>
+                </CustomLink> */}
+                <CustomLink
+                  className="      mx-1 p-1 px-3 position-relative"
+                  to="/bookrequest"
+                >
+                 
                   Request
                 </CustomLink>
                 {user ? (
                   <button
                     style={{ color: "rgb(113, 198, 235)" }}
-                    className="border-0 bg-transparent mx-3 p-1 "
+                    className="border-0 bg-transparent text-black font-bold mx-1 p-1 px-3 loginButon  "
                     onClick={handleSignOut}
                   >
                     SignOut
                   </button>
                 ) : (
-                  <CustomLink className="nav-link mx-3 p-1" to="/login">
+                  <CustomLink className="       mx-1 p-1 px-3" to="/login">
                     Login
                   </CustomLink>
                 )}

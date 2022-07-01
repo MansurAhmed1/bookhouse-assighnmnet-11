@@ -16,16 +16,16 @@ const Emailvarification = () => {
       <h3 className="text-danger">your email is not varified</h3>
       <h4 className="text-info">Please Verify Your Email</h4>
       <button
-      className="text-white border border-info bg-dark mt-4 btn"
+        className="  border border-info bg-dark mt-4 btn"
         onClick={async () => {
           await sendEmailVerification();
-        
-            toast("Sent email");
-        
-     
+
+          toast("Sent email");
         }}
-      >send email varification</button>
-          <ToastContainer />
+      >
+        send email varification
+      </button>
+      <ToastContainer />
     </div>
   );
 };

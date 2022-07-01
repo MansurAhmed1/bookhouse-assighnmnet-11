@@ -21,14 +21,14 @@ const BookRequest = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
       });
     event.target.reset();
   };
 
   return (
     <div>
-      <h3 className="text-white pt-5 fw-bold text-center">Send Book request</h3>
+      <h3 className="  pt-5 fw-bold text-center">Send Book request</h3>
       <form onSubmit={handleRequestSubmit} className="requset-form" action="">
         <input type="text" name="bookName" id="" placeholder="Book Name" />
 
@@ -42,7 +42,7 @@ const BookRequest = () => {
           rows="5"
           placeholder="Text Something"
         ></textarea>
-        {/* <input    className="bg-info text-black btn mt-2 input-button text-white fw-bold" type="submit" value="ADD ITEM" /> */}
+        {/* <input    className="bg-info text-black btn mt-2 input-button   fw-bold" type="submit" value="ADD ITEM" /> */}
         <button
           className="requset-form-button   mt-2 text-center btn"
           type="Submit"

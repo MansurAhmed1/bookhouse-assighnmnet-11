@@ -49,10 +49,10 @@ const Register = () => {
       </Helmet>
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <div className="card bg-black mb-5">
+          <div className="  mb-5">
             <form
               onSubmit={handleSignUp}
-              className="card-body cardbody-color p-lg-5"
+              className=" cardbody-color p-lg-5"
             >
               <div className="text-center">
               <img
@@ -107,8 +107,8 @@ const Register = () => {
                 </button>
               </div>
               <div className="text-center mt-2 m-0 mb-5 p-0 d-flex justify-content-center align-items-center">
-                <div className="signup">
-                  <Link to="/login">Already have an account?</Link>
+                <div className="signup text-black">
+                  <Link to="/login" className="text-black">Already have an account?</Link>
                 </div>
               </div>
             </form>

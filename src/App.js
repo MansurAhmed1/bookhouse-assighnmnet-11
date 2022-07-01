@@ -17,9 +17,12 @@ import Loading from "./components/Loading/Loading";
 import Footer from "./components/Footer/Footer";
 import Blog from "./components/Bolg/Blog";
 import Takearequest from "./components/TakeRequest/Takearequest";
+import Dashboard from "./components/Dashboard/Dashboard";
+import DashBoardLeft from "./components/DashboardLeft/DashBoardLeft";
+
 function App() {
   return (
-    <div className="App  ">
+    <div className="App">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
@@ -71,6 +74,11 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="/dashboard" element={<Dashboard></Dashboard>}>   
+        <Route path="" element={<DashBoardLeft></DashBoardLeft>}></Route>
+      
+        </Route>
+      
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
       <Footer></Footer>

@@ -5,15 +5,16 @@
 }
 a{
     font-size: 17px;
+    color: black;
+    font-weight: 600px;
    
 }
-.navbar {
- 
-    
-}
-header{
+nav{
     width: 90%;
     margin:0 auto;
-  
 }
 
+.headerTitle{
+ /* color: darkmagenta; */
+
+}

@@ -1,12 +1,13 @@
 .banner{
-  max-height: 510px;
+  max-height: 350px;
   width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
- 
 }
 .image{
-  width: 90%;
-  height: 510px;
+  width: 70%;
+  max-height: 350px;
   margin: auto;
   display: block;
  
@@ -21,9 +22,10 @@ top: 0;
 left: 0px;
 height: 100%;
 width: 100%;
+background-color: transparent;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-color: rgba(0, 139, 139, 0.18);
+
 }

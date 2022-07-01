@@ -1,5 +1,6 @@
+
 .btn-color{
-  background-color: #0e1c36;
+  background-color: darkmagenta;
   color: #fff;
   
 }
@@ -25,10 +26,18 @@
 }
 
 .cardbody-color{
- background-color: cornflowerblue;
+ /* background-color: cornflowerblue; */
  /* background-color: darkred; */
+ border: 2px solid darkmagenta;
+
+
 
 }
+.social-site-logIn button{
+  color: black;
+  border: 1px solid black;
+}
+
 
 .signup a ,a,.anchor{
   text-decoration: none;
@@ -74,6 +83,13 @@ code {
   top: 8px;
 }
 .login:hover {
-color: whitesmoke;
-background-color: brown;
+color: black;
+background-color: darkgrey;
+}
+
+@media (max-width:700px) {
+  .cardbody-color{
+    width: 90%;
+    padding: 0px 20px;
+  }
 }

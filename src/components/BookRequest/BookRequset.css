@@ -21,10 +21,12 @@ label {
   width: 60%;
   display: block;
   margin: auto;
-  background-color: rgb(77, 234, 234);
+  background-color: darkmagenta;
+color: aliceblue;
 }
 .requset-form-button:hover {
-  background-color: crimson;
+ background-color: rgba(5, 60, 109, 0.621); 
+ color: aliceblue;
 }
 
 @media (max-width:640px) {
@@ -38,6 +40,7 @@ label {
         width: 100%;
         display: block;
         margin: auto;
-        background-color: rgb(77, 234, 234);
+     
+        background-color: darkmagenta;
       }
 }

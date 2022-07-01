@@ -4,9 +4,9 @@ import AllRequest from '../AllRequest/AllRequest';
 const Takearequest = () => {
     const[requests,setrequests]=useState([])
     useEffect(function(){
-        fetch('https://assighment11.herokuapp.com/request')
-        .then(res=>res.json())
-        .then(data=>setrequests(data))
+        fetch("https://assighment11.herokuapp.com/request")
+          .then((res) => res.json())
+          .then((data) => setrequests(data));
 
     },[requests])
     return (

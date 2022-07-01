@@ -3,14 +3,15 @@
 import { onIdTokenChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import './ManageInventory.css'
 
 const ManageInventory = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const [book, setBook] = useState({});
 
-  console.log(book);
+  // console.log(book);
   useEffect(
     function () {
       fetch(`https://assighment11.herokuapp.com/book/${id}`)
@@ -38,7 +39,7 @@ const ManageInventory = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
       });
     event.target.reset();
   };
@@ -61,7 +62,7 @@ const ManageInventory = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
       });
   };
 
@@ -69,14 +70,14 @@ const ManageInventory = () => {
     <div className="py-5 mx-auto row" style={{ width: "90%" }}>
       <div className="col-lg-6">
         <div
-          className=" text-center py-3 row bg-white border border-white"
-          style={{ width: "500px" }}
+          className="  py-3 manageItemCard  row bg-white border border-black"
+    
         >
           <div className="col-lg-6 ">
             {" "}
             <img
               src={book.img}
-              className="card-img-top w-100 h-100"
+              className="card-img-top w-100 "
               alt="..."
             />
           </div>
@@ -95,20 +96,20 @@ const ManageInventory = () => {
             <p>{book.description}</p>
             <button
               onClick={handleDecreaseButton}
-              className="btn bg-black update-button  text-white  rounded"
+              className="btn  update-button     rounded"
             >
               Delivered{" "}
             </button>
           </div>
         </div>
       </div>
-      <div className="col-lg-6 text-center ">
-        <h3 className="text-white text-center fw-bold">update Quantity</h3>
-        <form onSubmit={handleOnSubmit} className="mt-3">
+      <div className="col-lg-6  text-center ">
+        <h3 className="  text-center pt-5 pt-lg-0 fw-bold">update Quantity</h3>
+        <form  onSubmit={handleOnSubmit} className="mt-3  updateQuantity-from">
           <input
             type="number"
             name="quantity"
-            className="py-2 px-5 "
+            className="py-2  px-5 "
             autocomplete="off"
             required
             placeholder="Enter Quantity "
@@ -116,7 +117,7 @@ const ManageInventory = () => {
           <input
             type="submit"
             value="UPDATE"
-            className="btn bg-info text-black py-2 px-5 "
+            className="btn update  py-2 px-5 "
           />
         </form>
       </div>
