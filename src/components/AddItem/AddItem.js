@@ -25,18 +25,17 @@ const AddItem = () => {
         email,
         publisher
       };
-      // const url = "https://assighment11.herokuapp.com/book";
-      // fetch(url, {
-      //   method: "POST",
-      //   headers: {
-      //     "content-type": "application/json"
-      //   },
-      //   body: JSON.stringify(data)
-      // })
-      //   .then((res) => res.json())
-      //   .then((result) => {
-
-      //   });
+      const url = "https://whispering-beyond-20921.herokuapp.com/book";
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+        .then((res) => res.json())
+        .then((result) => {
+        });
       event.target.reset();
     };
     return (

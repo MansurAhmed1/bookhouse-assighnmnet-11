@@ -73,7 +73,7 @@
 
 //   // if(user){
 //   //   const { data } = await axios.post(
-//   //     "https://assighment11.herokuapp.com/login",
+//   //     "https://whispering-beyond-20921.herokuapp.com/login",
 //   //     { email }
 //   //   );
 //   //   /////////////////
@@ -304,7 +304,7 @@ const Login = () => {
 
     //for tokken
     const { data } = await axios.post(
-      "https://assighment11.herokuapp.com/login",
+      "https://whispering-beyond-20921.herokuapp.com/login",
       { email }
     );
     localStorage.setItem("accessToken", data.accessToken);

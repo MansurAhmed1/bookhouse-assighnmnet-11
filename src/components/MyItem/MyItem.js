@@ -12,16 +12,18 @@ import spinner from "../../image/spinnergif.gif";
 import axiosPrivate from "../axiosPrivate";
 const MyItem = () => {
   const [user] = useAuthState(auth);
-  // console.log(user.email);
+  console.log(user.email);
   const [books, setBooks] = useState([]);
   const navigate = useNavigate();
   console.log(books);
   const [loading, setLoading] = useState(true);
+  // https://whispering-beyond-20921.herokuapp.com/
   useEffect(
     function () {
       const getItem = async () => {
         const email = user?.email;
-        const url = `https://assighment11.herokuapp.com/books?email=${email}`;
+        console.log( email)
+        const url = `https://whispering-beyond-20921.herokuapp.com/books?email=${email}`;
         try {
           const { data } = await axiosPrivate.get(url);
           setBooks(data);

@@ -54,21 +54,21 @@ const Header = () => {
             >
               <div className="navbar-nav   d-flex flex-lg-row flex-column justify-content-center align-items-center">
                 <CustomLink
-                  className=" active mx-lg-1  p-1 px-3 "
+                  className=" active mx-lg-1 p-1 px-3 "
                   aria-current="page"
                   to={"/"}
                 >
                   Home
                 </CustomLink>
                 <CustomLink
-                  className="   mx-1 p-1 px-3 "
+                  className="  mx-1 p-1 px-3 "
                   aria-current="page"
                   to={"/myitem"}
                 >
                   My Item
                 </CustomLink>
                 <CustomLink
-                  className="    mx-1 p-1 px-3 "
+                  className="     mx-1 p-1 px-3 "
                   aria-current="page"
                   to={"/additem"}
                 >
