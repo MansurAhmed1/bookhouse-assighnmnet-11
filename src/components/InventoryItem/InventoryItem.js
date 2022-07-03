@@ -14,7 +14,7 @@ const InventoryItem = () => {
     fetch("https://assighment11.herokuapp.com/book")
       .then((res) => res.json())
       .then((data) => {
-        setBooks(data.slice(3, 9));
+        setBooks(data);
         setLoading(false);
       });
   });
